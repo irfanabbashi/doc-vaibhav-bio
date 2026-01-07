@@ -1,421 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeevan Rekha Hospital | Premium Healthcare</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jeevan Rekha Hospital | Owned by Dr. Vaibhav Agrawal</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+  line-height:1.6;
+  color:#222;
+  background:#f9faff;
+}
 
-    <style>
-        /* --- CUSTOM STYLES --- */
-        :root {
-            --primary-blue: #0d6efd;
-            --dark-blue: #0a4291;
-            --light-bg: #f8f9fa;
-        }
+/* HERO SECTION */
+.hero{
+  background: linear-gradient(135deg, #0b5ed7, #3ac3ff);
+  color:#fff;
+  text-align:center;
+  padding:60px 20px;
+  border-radius:12px;
+}
+.hero h1{
+  font-size:42px;
+  margin-bottom:10px;
+  font-weight:700;
+  letter-spacing:1px;
+}
+.hero p{
+  font-size:18px;
+  margin-bottom:5px;
+}
+.hero .address{
+  font-weight:bold;
+  margin-top:10px;
+  font-size:16px;
+  color:#fff;
+}
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: #444;
-            background-color: var(--light-bg);
-            overflow-x: hidden;
-        }
+/* OWNER SECTION */
+.owner-section{
+  display:flex;
+  align-items:flex-start;
+  gap:40px;
+  padding:50px 12%;
+  flex-wrap:wrap;
+  background:#ffffff;
+  border-radius:12px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.15);
+  margin: -60px 12px 50px 12px;
+}
+.owner-section img{
+  width:180px;
+  border-radius:50%;
+  border:3px solid #0b5ed7;
+}
+.owner-details{
+  max-width:600px;
+}
+.owner-details h3{
+  color:#0b5ed7;
+  margin-bottom:10px;
+  font-size:24px;
+}
+.owner-details p, .owner-details ul{
+  margin-bottom:8px;
+  font-size:15px;
+  line-height:1.5;
+}
+.owner-details strong{
+  color:#222;
+}
 
-        /* Hero Section */
-        .hero-section {
-            background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
-            color: white;
-            padding: 100px 0 150px 0; /* Extra padding at bottom for overlap */
-            position: relative;
-            border-bottom-left-radius: 50px;
-            border-bottom-right-radius: 50px;
-            margin-bottom: -80px; /* Negative margin for overlap effect */
-        }
+/* HOSPITAL MAIN IMAGE & DETAILS */
+.hospital-main{
+  display:flex;
+  align-items:flex-start;
+  gap:40px;
+  padding:60px 12%;
+  flex-wrap:wrap;
+}
+.hospital-main img{
+  width:50%;
+  border-radius:12px;
+  border:3px solid #0b5ed7;
+  transition: transform 0.3s ease;
+}
+.hospital-main img:hover{
+  transform: scale(1.05);
+}
+.hospital-info{
+  flex:1;
+  max-width:550px;
+}
+.hospital-info h2{
+  color:#0b5ed7;
+  margin-bottom:15px;
+  font-size:28px;
+}
+.hospital-info ul{
+  margin-top:10px;
+  padding-left:20px;
+}
+.hospital-info ul li{
+  margin-bottom:8px;
+  font-size:15px;
+  line-height:1.6;
+}
 
-        .hero-title {
-            font-weight: 700;
-            font-size: 3.5rem;
-            text-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
+/* INFRASTRUCTURE GALLERY */
+.section{
+  padding:60px 12%;
+}
+.section.light{
+  background:#f4f7ff;
+}
+.section h2{
+  color:#0b5ed7;
+  margin-bottom:25px;
+  font-size:28px;
+}
+.gallery{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+}
+.gallery img{
+  width:calc(33.33% - 13.33px);
+  border-radius:10px;
+  border:1px solid #ddd;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery img:hover{
+  transform: scale(1.05);
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
 
-        .hero-address {
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(5px);
-            padding: 8px 20px;
-            border-radius: 50px;
-            display: inline-block;
-            font-size: 0.9rem;
-            margin-top: 15px;
-        }
+/* FOOTER */
+footer{
+  background:#0b5ed7;
+  color:#fff;
+  text-align:center;
+  padding:25px;
+  font-size:14px;
+  font-weight:500;
+  letter-spacing:0.5px;
+}
 
-        /* Owner Card (Floating) */
-        .owner-card {
-            background: white;
-            border: none;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-            overflow: hidden;
-            position: relative;
-            z-index: 10;
-        }
-
-        .doctor-img-container {
-            position: relative;
-            overflow: hidden;
-            height: 100%;
-            min-height: 300px;
-        }
-
-        .doctor-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .owner-card:hover .doctor-img {
-            transform: scale(1.05);
-        }
-
-        .section-title {
-            color: var(--dark-blue);
-            font-weight: 700;
-            position: relative;
-            margin-bottom: 30px;
-            display: inline-block;
-        }
-
-        .section-title::after {
-            content: '';
-            width: 60px;
-            height: 4px;
-            background: var(--primary-blue);
-            position: absolute;
-            bottom: -10px;
-            left: 0;
-            border-radius: 2px;
-        }
-
-        /* Features List */
-        .feature-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
-            transition: transform 0.3s;
-            border-left: 4px solid var(--primary-blue);
-        }
-
-        .feature-item:hover {
-            transform: translateX(10px);
-        }
-
-        .feature-icon {
-            color: var(--primary-blue);
-            font-size: 1.2rem;
-            margin-right: 15px;
-        }
-
-        /* Hospital Image */
-        .hospital-img {
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border: 5px solid white;
-            transition: transform 0.3s;
-        }
-        
-        .hospital-img:hover {
-            transform: translateY(-5px);
-        }
-
-        /* Gallery */
-        .gallery-item {
-            overflow: hidden;
-            border-radius: 15px;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            position: relative;
-            height: 250px;
-        }
-
-        .gallery-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-
-        .gallery-item:hover .gallery-img {
-            transform: scale(1.1);
-        }
-        
-        .gallery-overlay {
-            position: absolute;
-            top:0; left:0; right:0; bottom:0;
-            background: rgba(13, 110, 253, 0.4);
-            opacity: 0;
-            transition: opacity 0.3s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
-        }
-
-        /* Footer */
-        footer {
-            background: #1a1d20;
-            color: #adb5bd;
-            padding: 40px 0;
-            text-align: center;
-        }
-
-        /* Responsive Tweaks */
-        @media (max-width: 768px) {
-            .hero-title { font-size: 2.5rem; }
-            .hero-section { padding-bottom: 100px; margin-bottom: -50px; }
-            .doctor-img-container { min-height: 250px; }
-        }
-    </style>
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .gallery img{
+    width:calc(50% - 10px);
+  }
+}
+@media(max-width:768px){
+  .owner-section, .hospital-main{
+    flex-direction:column;
+    align-items:center;
+  }
+  .hospital-main img{
+    width:80%;
+  }
+  .gallery img{
+    width:100%;
+  }
+}
+</style>
 </head>
 <body>
 
-    <header class="hero-section text-center">
-        <div class="container">
-            <h1 class="hero-title animate-title">Jeevan Rekha Hospital</h1>
-            <p class="lead fs-4">Premium Healthcare Infrastructure & Trust</p>
-            <div class="hero-address">
-                <i class="fas fa-map-marker-alt me-2"></i> 
-                Pratap Nagar, Tonk Road, Sanganer, Jaipur-302033
-            </div>
-        </div>
-    </header>
+<!-- HERO -->
+<section class="hero">
+  <h1>Jeevan Rekha Hospital</h1>
+  <p>Premium Healthcare Infrastructure</p>
+  <p class="address">HG-2/C-1, Haldi Ghati Marg, Pratap Nagar, Tonk Road, Sanganer, Jaipur-302033</p>
+</section>
 
-    <div class="container mb-5">
-        <div class="card owner-card">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <div class="doctor-img-container">
-                        <img src="./Images/doctor.jpeg" class="doctor-img" alt="Dr. Vaibhav Agrawal" onerror="this.src='https://via.placeholder.com/400x400?text=Dr.+Vaibhav'">
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body p-4 p-lg-5">
-                        <h5 class="text-primary text-uppercase fw-bold mb-1">Premises Owner</h5>
-                        <h2 class="fw-bold mb-3">Dr. Vaibhav Agrawal</h2>
-                        
-                        <div class="row mb-4">
-                            <div class="col-md-6 mb-2">
-                                <div class="d-flex align-items-center">
-                                    <div class="bg-primary text-white rounded-circle p-2 me-3">
-                                        <i class="fas fa-phone-alt"></i>
-                                    </div>
-                                    <div>
-                                        <small class="text-muted d-block">Contact</small>
-                                        <strong>9214073070</strong>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-2">
-                                <div class="d-flex align-items-center">
-                                    <div class="bg-primary text-white rounded-circle p-2 me-3">
-                                        <i class="fas fa-graduation-cap"></i>
-                                    </div>
-                                    <div>
-                                        <small class="text-muted d-block">Education</small>
-                                        <strong>MBBS, MS (Orthopedic)</strong>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+<!-- OWNER SECTION -->
+<section class="owner-section">
+  <img src="./Images/doctor.jpeg" alt="Dr. Vaibhav Agrawal">
+  <div class="owner-details">
+    <h3>Dr. Vaibhav Agrawal</h3>
+    <p><strong>Mobile:</strong> 9214073070</p>
+    <p><strong>Education:</strong> MBBS, MS (Orthopedic)</p>
+    <p><strong>Experience:</strong></p>
+    <ul>
+      <li>Ex. Senior Resident (Academic) - Orthopedic Department</li>
+      <li>RUHS Medical College Jaipur (Aug 2016 – Jan 2017)</li>
+      <li>SMS Medical College Jaipur (Feb 2017 – Oct 2017)</li>
+      <li>Govt. Medical College Bharatpur (Sept 2018 – Apr 2019)</li>
+    </ul>
+    <p>Owner & Medical Professional dedicated to providing reliable, safe, and patient-friendly healthcare infrastructure. Compassionate and hardworking Orthopedic specialist, highly communicative, fluent in English and Hindi, always striving to excel in the field.</p>
+  </div>
+</section>
 
-                        <h5 class="fw-bold mt-4 mb-3">Professional Experience</h5>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Ex. Senior Resident - RUHS Medical College (2016-17)</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> SMS Medical College Jaipur (2017)</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Govt. Medical College Bharatpur (2018-19)</li>
-                        </ul>
-                        <p class="text-muted mt-3 fst-italic">
-                            "Dedicated to providing reliable, safe, and patient-friendly healthcare infrastructure. Always striving to excel in the field."
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<!-- HOSPITAL MAIN IMAGE & DETAILS -->
+<section class="hospital-main">
+  <div class="hospital-info">
+    <h2>Hospital Overview</h2>
+    <p>Jeevan Rekha Hospital is a <strong>50-bed Multi-Specialty Hospital</strong> operating from a modern, multi-storey building designed for smooth workflows and patient comfort. The hospital offers specialized departments including:</p>
+    <ul>
+      <li>Orthopedics</li>
+      <li>General Surgery</li>
+      <li>Obstetrics & Gynaecology</li>
+      <li>Physiotherapy</li>
+    </ul>
+    <ul>
+      <li><strong>Premises Owner:</strong> Dr. Vaibhav Agrawal</li>
+      <li><strong>Hospital Operator:</strong> Jeevan Rekha Hospital (on rental basis)</li>
+      <li><strong>Facility Type:</strong> Multi-Specialty Hospital Infrastructure</li>
+    </ul>
+  </div>
+  <img src="./Images/jeewan.jpeg" alt="Jeevan Rekha Hospital Building">
+</section>
 
-    <section class="container py-5">
-        <div class="row align-items-center">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-                <h2 class="section-title">Hospital Overview</h2>
-                <p class="lead text-dark">Jeevan Rekha Hospital is a <strong>100-bed Multi-Specialty Hospital</strong> operating from a modern, multi-storey building.</p>
-                <p class="text-muted mb-4">Designed for smooth workflows and maximum patient comfort, our facility ensures high standards of hygiene and care.</p>
-                
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="feature-item">
-                            <i class="fas fa-bone feature-icon"></i>
-                            <span>Orthopedics</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="feature-item">
-                            <i class="fas fa-user-md feature-icon"></i>
-                            <span>General Surgery</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="feature-item">
-                            <i class="fas fa-baby-carriage feature-icon"></i>
-                            <span>Obstetrics & Gynae</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="feature-item">
-                            <i class="fas fa-running feature-icon"></i>
-                            <span>Physiotherapy</span>
-                        </div>
-                    </div>
-                </div>
+<!-- HOSPITAL INFRASTRUCTURE GALLERY -->
+<section class="section light">
+  <h2>Infrastructure & Design</h2>
+  <div class="gallery">
+    <img src="./Images/OT.jpeg" alt="Operation Theater">
+    <img src="./Images/labour.jpg" alt="Labour Room">
+    <img src="./Images/dressing.jpg" alt="Dressing Room">
+    <img src="./Images/pharmacy.jpg" alt="Pharmacy">
+    <img src="./Images/chember.jpg" alt="Doctor Chamber">
+    <img src="./Images/reception.jpg" alt="Reception Area">
+  </div>
+</section>
 
-                <div class="alert alert-light border mt-4">
-                    <small class="text-muted text-uppercase fw-bold">Management</small>
-                    <div class="d-flex justify-content-between mt-2">
-                        <span><strong>Operator:</strong> Jeevan Rekha Hospital</span>
-                        <span class="badge bg-success">Rental Basis</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 text-center">
-                <img src="./Images/jeewan.jpeg" alt="Hospital Building" class="img-fluid hospital-img" onerror="this.src='https://via.placeholder.com/600x400?text=Hospital+Building'">
-            </div>
-        </div>
-    </section>
+<!-- VISION -->
+<section class="section">
+  <h2>Vision & Trust</h2>
+  <p>The vision behind the Jeevan Rekha premises is to support dependable healthcare delivery through safe, accessible, and professionally managed medical infrastructure. Responsible ownership ensures long-term value for healthcare providers, patients, and the community.</p>
+</section>
 
-    <section class="bg-white py-5">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title text-center">Infrastructure & Facilities</h2>
-                <p class="text-muted">Click on any image to enlarge</p>
-            </div>
-            
-            <div class="row g-4">
-                <div class="col-md-4 col-sm-6">
-                    <div class="gallery-item">
-                        <img src="./Images/OT.jpeg" alt="Operation Theater" class="gallery-img" onerror="this.src='https://via.placeholder.com/400x300?text=OT'">
-                        <div class="gallery-overlay">
-                            <i class="fas fa-search-plus text-white fa-2x"></i>
-                        </div>
-                    </div>
-                    <h6 class="text-center mt-2 fw-bold text-muted">Operation Theater</h6>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="gallery-item">
-                        <img src="./Images/labour.jpg" alt="Labour Room" class="gallery-img" onerror="this.src='https://via.placeholder.com/400x300?text=Labour+Room'">
-                        <div class="gallery-overlay">
-                            <i class="fas fa-search-plus text-white fa-2x"></i>
-                        </div>
-                    </div>
-                    <h6 class="text-center mt-2 fw-bold text-muted">Labour Room</h6>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="gallery-item">
-                        <img src="./Images/dressing.jpg" alt="Dressing Room" class="gallery-img" onerror="this.src='https://via.placeholder.com/400x300?text=Dressing+Room'">
-                        <div class="gallery-overlay">
-                            <i class="fas fa-search-plus text-white fa-2x"></i>
-                        </div>
-                    </div>
-                    <h6 class="text-center mt-2 fw-bold text-muted">Dressing Room</h6>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="gallery-item">
-                        <img src="./Images/pharmacy.jpg" alt="Pharmacy" class="gallery-img" onerror="this.src='https://via.placeholder.com/400x300?text=Pharmacy'">
-                        <div class="gallery-overlay">
-                            <i class="fas fa-search-plus text-white fa-2x"></i>
-                        </div>
-                    </div>
-                    <h6 class="text-center mt-2 fw-bold text-muted">Pharmacy</h6>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="gallery-item">
-                        <img src="./Images/chember.jpg" alt="Doctor Chamber" class="gallery-img" onerror="this.src='https://via.placeholder.com/400x300?text=Doctor+Chamber'">
-                        <div class="gallery-overlay">
-                            <i class="fas fa-search-plus text-white fa-2x"></i>
-                        </div>
-                    </div>
-                    <h6 class="text-center mt-2 fw-bold text-muted">Doctor Chamber</h6>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="gallery-item">
-                        <img src="./Images/reception.jpg" alt="Reception" class="gallery-img" onerror="this.src='https://via.placeholder.com/400x300?text=Reception'">
-                        <div class="gallery-overlay">
-                            <i class="fas fa-search-plus text-white fa-2x"></i>
-                        </div>
-                    </div>
-                    <h6 class="text-center mt-2 fw-bold text-muted">Reception</h6>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="container py-5 text-center">
-        <div class="p-5 rounded-3 bg-light border">
-            <i class="fas fa-quote-left fa-2x text-primary mb-3"></i>
-            <h3 class="mb-3">Vision & Trust</h3>
-            <p class="lead text-muted" style="max-width: 800px; margin: 0 auto;">
-                "The vision behind the Jeevan Rekha premises is to support dependable healthcare delivery through safe, accessible, and professionally managed medical infrastructure. Responsible ownership ensures long-term value for healthcare providers, patients, and the community."
-            </p>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p class="mb-1">&copy; 2024 Jeevan Rekha Hospital Premises</p>
-            <p class="small">Owned & Managed by Dr. Vaibhav Agrawal</p>
-        </div>
-    </footer>
-
-    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content bg-transparent border-0">
-                <div class="modal-body p-0 text-center position-relative">
-                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close" style="z-index: 1056;"></button>
-                    <img src="" id="modalImage" class="img-fluid rounded shadow-lg" alt="Preview">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-        $(document).ready(function(){
-            // GALLERY LOGIC
-            $('.gallery-item').click(function(){
-                // 1. Get the source of the image clicked
-                var imgSrc = $(this).find('img').attr('src');
-                
-                // 2. Set the Modal Image source
-                $('#modalImage').attr('src', imgSrc);
-                
-                // 3. Open the Modal
-                var myModal = new bootstrap.Modal(document.getElementById('imageModal'));
-                myModal.show();
-            });
-
-            // Smooth simple entrance animation on load
-            $(".owner-card").css({opacity: 0, marginTop: "50px"}).animate({opacity: 1, marginTop: "0px"}, 1000);
-        });
-    </script>
+<!-- FOOTER -->
+<footer>
+  © Jeevan Rekha Hospital Premises | Owned by Dr. Vaibhav Agrawal
+</footer>
 
 </body>
 </html>
