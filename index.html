@@ -1,247 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jeevan Rekha Hospital | Owned by Dr. Vaibhav Agrawal</title>
-
-<style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-body{
-  line-height:1.6;
-  color:#222;
-  background:#f9faff;
-}
-
-/* HERO SECTION */
-.hero{
-  background: linear-gradient(135deg, #0b5ed7, #3ac3ff);
-  color:#fff;
-  text-align:center;
-  padding:60px 20px;
-  border-radius:12px;
-}
-.hero h1{
-  font-size:42px;
-  margin-bottom:10px;
-  font-weight:700;
-  letter-spacing:1px;
-}
-.hero p{
-  font-size:18px;
-  margin-bottom:5px;
-}
-.hero .address{
-  font-weight:bold;
-  margin-top:10px;
-  font-size:16px;
-  color:#fff;
-}
-
-/* OWNER SECTION */
-.owner-section{
-  display:flex;
-  align-items:flex-start;
-  gap:40px;
-  padding:50px 12%;
-  flex-wrap:wrap;
-  background:#ffffff;
-  border-radius:12px;
-  box-shadow:0 8px 25px rgba(0,0,0,0.15);
-  margin: -60px 12px 50px 12px;
-}
-.owner-section img{
-  width:180px;
-  border-radius:50%;
-  border:3px solid #0b5ed7;
-}
-.owner-details{
-  max-width:600px;
-}
-.owner-details h3{
-  color:#0b5ed7;
-  margin-bottom:10px;
-  font-size:24px;
-}
-.owner-details p, .owner-details ul{
-  margin-bottom:8px;
-  font-size:15px;
-  line-height:1.5;
-}
-.owner-details strong{
-  color:#222;
-}
-
-/* HOSPITAL MAIN IMAGE & DETAILS */
-.hospital-main{
-  display:flex;
-  align-items:flex-start;
-  gap:40px;
-  padding:60px 12%;
-  flex-wrap:wrap;
-}
-.hospital-main img{
-  width:50%;
-  border-radius:12px;
-  border:3px solid #0b5ed7;
-  transition: transform 0.3s ease;
-}
-.hospital-main img:hover{
-  transform: scale(1.05);
-}
-.hospital-info{
-  flex:1;
-  max-width:550px;
-}
-.hospital-info h2{
-  color:#0b5ed7;
-  margin-bottom:15px;
-  font-size:28px;
-}
-.hospital-info ul{
-  margin-top:10px;
-  padding-left:20px;
-}
-.hospital-info ul li{
-  margin-bottom:8px;
-  font-size:15px;
-  line-height:1.6;
-}
-
-/* INFRASTRUCTURE GALLERY */
-.section{
-  padding:60px 12%;
-}
-.section.light{
-  background:#f4f7ff;
-}
-.section h2{
-  color:#0b5ed7;
-  margin-bottom:25px;
-  font-size:28px;
-}
-.gallery{
-  display:flex;
-  flex-wrap:wrap;
-  gap:20px;
-}
-.gallery img{
-  width:calc(33.33% - 13.33px);
-  border-radius:10px;
-  border:1px solid #ddd;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.gallery img:hover{
-  transform: scale(1.05);
-  box-shadow:0 10px 25px rgba(0,0,0,0.2);
-}
-
-/* FOOTER */
-footer{
-  background:#0b5ed7;
-  color:#fff;
-  text-align:center;
-  padding:25px;
-  font-size:14px;
-  font-weight:500;
-  letter-spacing:0.5px;
-}
-
-/* RESPONSIVE */
-@media(max-width:1024px){
-  .gallery img{
-    width:calc(50% - 10px);
-  }
-}
-@media(max-width:768px){
-  .owner-section, .hospital-main{
-    flex-direction:column;
-    align-items:center;
-  }
-  .hospital-main img{
-    width:80%;
-  }
-  .gallery img{
-    width:100%;
-  }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeevan Rekha Hospital | Premium Healthcare</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <h1>Jeevan Rekha Hospital</h1>
-  <p>Premium Healthcare Infrastructure</p>
-  <p class="address">HG-2/C-1, Haldi Ghati Marg, Pratap Nagar, Tonk Road, Sanganer, Jaipur-302033</p>
-</section>
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <div class="brand-icon me-2"><i class="fas fa-plus"></i></div>
+                <span class="fw-bold text-dark tracking-wide">Jeevan Rekha</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#owner">Owner</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Departments</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="tel:9214073070" class="btn btn-primary btn-sm rounded-pill px-4">
+                            <i class="fas fa-phone-alt me-2"></i>92140-73070
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<!-- OWNER SECTION -->
-<section class="owner-section">
-  <img src="./Images/doctor.jpeg" alt="Dr. Vaibhav Agrawal">
-  <div class="owner-details">
-    <h3>Dr. Vaibhav Agrawal</h3>
-    <p><strong>Mobile:</strong> 9214073070</p>
-    <p><strong>Education:</strong> MBBS, MS (Orthopedic)</p>
-    <p><strong>Experience:</strong></p>
-    <ul>
-      <li>Ex. Senior Resident (Academic) - Orthopedic Department</li>
-      <li>RUHS Medical College Jaipur (Aug 2016 – Jan 2017)</li>
-      <li>SMS Medical College Jaipur (Feb 2017 – Oct 2017)</li>
-      <li>Govt. Medical College Bharatpur (Sept 2018 – Apr 2019)</li>
-    </ul>
-    <p>Owner & Medical Professional dedicated to providing reliable, safe, and patient-friendly healthcare infrastructure. Compassionate and hardworking Orthopedic specialist, highly communicative, fluent in English and Hindi, always striving to excel in the field.</p>
-  </div>
-</section>
+    <header id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-text-col">
+                    <div class="badge-container mb-3">
+                        <span class="badge-custom"><i class="fas fa-check-circle me-1"></i> Premium Infrastructure</span>
+                    </div>
+                    <h1 class="display-4 fw-bolder mb-3 text-dark">
+                        Jeevan Rekha <br>
+                        <span class="text-primary">Hospital</span>
+                    </h1>
+                    <p class="lead text-secondary mb-4">
+                        A modern <strong>50-bed Multi-Specialty Hospital</strong> designed for smooth workflows, patient comfort, and reliable healthcare delivery.
+                    </p>
+                    
+                    <div class="hero-contact-card">
+                        <div class="icon-box">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="text-box">
+                            <small class="text-uppercase text-muted fw-bold" style="font-size: 0.75rem;">Located At</small>
+                            <p class="mb-0 fw-bold text-dark" style="font-size: 0.9rem; line-height: 1.3;">
+                                HG-2/C-1, Haldi Ghati Marg, Pratap Nagar,<br>Tonk Road, Sanganer, Jaipur-302033
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
-<!-- HOSPITAL MAIN IMAGE & DETAILS -->
-<section class="hospital-main">
-  <div class="hospital-info">
-    <h2>Hospital Overview</h2>
-    <p>Jeevan Rekha Hospital is a <strong>50-bed Multi-Specialty Hospital</strong> operating from a modern, multi-storey building designed for smooth workflows and patient comfort. The hospital offers specialized departments including:</p>
-    <ul>
-      <li>Orthopedics</li>
-      <li>General Surgery</li>
-      <li>Obstetrics & Gynaecology</li>
-      <li>Physiotherapy</li>
-    </ul>
-    <ul>
-      <li><strong>Premises Owner:</strong> Dr. Vaibhav Agrawal</li>
-      <li><strong>Hospital Operator:</strong> Jeevan Rekha Hospital (on rental basis)</li>
-      <li><strong>Facility Type:</strong> Multi-Specialty Hospital Infrastructure</li>
-    </ul>
-  </div>
-  <img src="./Images/jeewan.jpeg" alt="Jeevan Rekha Hospital Building">
-</section>
+                <div class="col-lg-6 hero-img-col mt-5 mt-lg-0 text-center position-relative">
+                    <div class="img-bg-shape"></div>
+                    <img src="./Images/jeewan.jpeg" alt="Jeevan Rekha Hospital Building" class="img-fluid main-hero-img shadow-lg">
+                    
+                    <div class="floating-badge">
+                        <i class="fas fa-hospital text-primary fs-4 mb-1"></i>
+                        <span class="d-block fw-bold">50 Beds</span>
+                        <small class="text-muted">Multi-Specialty</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<!-- HOSPITAL INFRASTRUCTURE GALLERY -->
-<section class="section light">
-  <h2>Infrastructure & Design</h2>
-  <div class="gallery">
-    <img src="./Images/OT.jpeg" alt="Operation Theater">
-    <img src="./Images/labour.jpg" alt="Labour Room">
-    <img src="./Images/dressing.jpg" alt="Dressing Room">
-    <img src="./Images/pharmacy.jpg" alt="Pharmacy">
-    <img src="./Images/chember.jpg" alt="Doctor Chamber">
-    <img src="./Images/reception.jpg" alt="Reception Area">
-  </div>
-</section>
+    <section id="owner" class="owner-overlap-section">
+        <div class="container">
+            <div class="card glass-card border-0">
+                <div class="row g-0">
+                    <div class="col-md-4 col-lg-3 text-center bg-light-blue d-flex align-items-center justify-content-center p-4">
+                        <div class="">
+                            <img src="./Images/doctor.jpeg" alt="Dr. Vaibhav Agrawal" class="doctor-img">
+                        </div>
+                    </div>
+                    <div class="col-md-8 col-lg-9">
+                        <div class="card-body p-4 p-lg-5">
+                            <div class="d-flex justify-content-between align-items-start flex-wrap">
+                                <div>
+                                    <h5 class="text-uppercase text-primary fw-bold mb-1 letter-spacing-1">Premises Owner</h5>
+                                    <h2 class="fw-bold mb-0">Dr. Vaibhav Agrawal</h2>
+                                    <p class="text-muted mb-3">MBBS, MS (Orthopedic)</p>
+                                </div>
+                                <div class="contact-pill mt-2 mt-md-0">
+                                    <i class="fas fa-mobile-alt me-2"></i>9214073070
+                                </div>
+                            </div>
 
-<!-- VISION -->
-<section class="section">
-  <h2>Vision & Trust</h2>
-  <p>The vision behind the Jeevan Rekha premises is to support dependable healthcare delivery through safe, accessible, and professionally managed medical infrastructure. Responsible ownership ensures long-term value for healthcare providers, patients, and the community.</p>
-</section>
+                            <hr class="my-4 opacity-10">
 
-<!-- FOOTER -->
-<footer>
-  © Jeevan Rekha Hospital Premises | Owned by Dr. Vaibhav Agrawal
-</footer>
+                            <div class="row">
+                                <div class="col-lg-7 mb-4 mb-lg-0">
+                                    <h6 class="fw-bold mb-3"><i class="fas fa-history me-2 text-primary"></i>Experience</h6>
+                                    <ul class="experience-list">
+                                        <li>Ex. Senior Resident (Academic) - Orthopedic Dept</li>
+                                        <li>RUHS Medical College Jaipur (Aug 2016 – Jan 2017)</li>
+                                        <li>SMS Medical College Jaipur (Feb 2017 – Oct 2017)</li>
+                                        <li>Govt. Medical College Bharatpur (Sept 2018 – Apr 2019)</li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="quote-box">
+                                        <i class="fas fa-quote-left text-primary mb-2 opacity-50"></i>
+                                        <p class="small fst-italic mb-0">
+                                            "Owner & Medical Professional dedicated to providing reliable, safe, and patient-friendly healthcare infrastructure. Compassionate and hardworking Orthopedic specialist."
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="services" class="section-padding bg-white">
+        <div class="container">
+            <div class="row justify-content-center text-center mb-5">
+                <div class="col-lg-8">
+                    <span class="text-primary fw-bold text-uppercase small">Our Facilities</span>
+                    <h2 class="fw-bold mt-2">Specialized Departments</h2>
+                    <div class="divider mx-auto"></div>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-3 col-6">
+                    <div class="dept-card">
+                        <div class="icon-circle"><i class="fas fa-bone"></i></div>
+                        <h5>Orthopedics</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="dept-card">
+                        <div class="icon-circle"><i class="fas fa-procedures"></i></div>
+                        <h5>General Surgery</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="dept-card">
+                        <div class="icon-circle"><i class="fas fa-baby-carriage"></i></div>
+                        <h5>Obstetrics</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="dept-card">
+                        <div class="icon-circle"><i class="fas fa-walking"></i></div>
+                        <h5>Physiotherapy</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-primary mt-5 d-flex align-items-center justify-content-between flex-wrap" role="alert">
+                <div class="d-flex align-items-center">
+                    <i class="fas fa-info-circle fs-3 me-3"></i>
+                    <div>
+                        <strong>Hospital Operator:</strong> Jeevan Rekha Hospital (Rental Basis)<br>
+                        <span class="small">Owner: Dr. Vaibhav Agrawal</span>
+                    </div>
+                </div>
+                <span class="badge bg-white text-primary mt-2 mt-md-0 px-3 py-2 rounded-pill">50 Beds Facility</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section-padding bg-light">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-end mb-4">
+                <div>
+                    <h2 class="fw-bold">Infrastructure Gallery</h2>
+                    <p class="text-muted mb-0">A glimpse into our advanced facilities.</p>
+                </div>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-lg-6">
+                    <div class="gallery-item h-100" onclick="openModal('./Images/OT.jpeg', 'Operation Theater')">
+                        <img src="./Images/OT.jpeg" alt="Operation Theater" class="gallery-img">
+                        <div class="overlay">
+                            <div class="text">
+                                <h5>Operation Theater</h5>
+                                <p><i class="fas fa-expand-arrows-alt"></i> Click to View</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="gallery-item small-h" onclick="openModal('./Images/labour.jpg', 'Labour Room')">
+                                <img src="./Images/labour.jpg" alt="Labour Room" class="gallery-img">
+                                <div class="overlay"><div class="text"><small>Labour Room</small></div></div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="gallery-item small-h" onclick="openModal('./Images/dressing.jpg', 'Dressing Room')">
+                                <img src="./Images/dressing.jpg" alt="Dressing Room" class="gallery-img">
+                                <div class="overlay"><div class="text"><small>Dressing Room</small></div></div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="gallery-item small-h" onclick="openModal('./Images/pharmacy.jpg', 'Pharmacy')">
+                                <img src="./Images/pharmacy.jpg" alt="Pharmacy" class="gallery-img">
+                                <div class="overlay"><div class="text"><small>Pharmacy</small></div></div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="gallery-item small-h" onclick="openModal('./Images/reception.jpg', 'Reception')">
+                                <img src="./Images/reception.jpg" alt="Reception" class="gallery-img">
+                                <div class="overlay"><div class="text"><small>Reception</small></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row align-items-center text-center text-md-start">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <h4 class="fw-bold text-white">Jeevan Rekha Hospital</h4>
+                    <p class="text-secondary small mt-2 w-md-75">
+                        Supporting dependable healthcare delivery through safe, accessible, and professionally managed medical infrastructure.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-1 text-light">HG-2/C-1, Haldi Ghati Marg, Pratap Nagar, Jaipur</p>
+                    <p class="fw-bold text-primary">Owned by Dr. Vaibhav Agrawal</p>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <div class="text-center small text-secondary">
+                &copy; 2024 Jeevan Rekha Hospital Premises. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="galleryModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-xl"> <div class="modal-content bg-transparent border-0">
+                <div class="modal-body text-center p-0 position-relative">
+                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" style="z-index: 10; background-color: rgba(0,0,0,0.5); border-radius: 50%; padding: 10px;"></button>
+                    <img src="" id="modalImg" class="img-fluid rounded shadow-lg" style="max-height: 85vh;">
+                    <h5 id="modalCaption" class="text-white mt-3 fw-light bg-dark d-inline-block px-3 py-1 rounded"></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

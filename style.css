@@ -1,0 +1,368 @@
+/* --- GLOBAL & FONTS --- */
+:root {
+    --primary: #0056b3;        /* Deep Royal Blue */
+    --primary-light: #e6f0fa;  /* Very Light Blue */
+    --accent: #2563eb;         /* Bright Blue */
+    --dark: #0f172a;           /* Dark Navy */
+    --text: #475569;           /* Slate Grey */
+    --bg-gray: #f8fafc;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    color: var(--text);
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--dark);
+    font-weight: 700;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    padding: 12px 0;
+}
+
+.brand-icon {
+    width: 35px;
+    height: 35px;
+    background: var(--primary);
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.nav-link {
+    font-weight: 600;
+    color: var(--dark) !important;
+    margin: 0 10px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary) !important;
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+    padding-top: 140px;
+    padding-bottom: 120px;
+    background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add a subtle blue curve on the right */
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(37,99,235,0.05) 0%, rgba(255,255,255,0) 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.badge-custom {
+    background: var(--primary-light);
+    color: var(--primary);
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: inline-block;
+}
+
+.hero-contact-card {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    border: 1px solid rgba(0,0,0,0.04);
+    max-width: 100%;
+}
+
+.hero-contact-card .icon-box {
+    width: 45px;
+    height: 45px;
+    background: var(--bg-gray);
+    color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+/* Main Hero Image Styling */
+.main-hero-img {
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
+    transform: rotate(2deg);
+    border: 6px solid white;
+    transition: transform 0.4s ease;
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+}
+
+.main-hero-img:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+.img-bg-shape {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    border-radius: 20px;
+    z-index: 1;
+    opacity: 0.1;
+    transform: rotate(-3deg);
+}
+
+.floating-badge {
+    position: absolute;
+    bottom: 30px;
+    left: -20px;
+    background: white;
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    z-index: 3;
+    text-align: left;
+    border-left: 4px solid var(--primary);
+}
+
+/* --- OWNER SECTION (OVERLAP) --- */
+.owner-overlap-section {
+    margin-top: -80px;
+    position: relative;
+    z-index: 10;
+    padding-bottom: 50px;
+}
+
+.glass-card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.bg-light-blue {
+    background-color: var(--primary-light);
+}
+
+.doctor-frame {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    padding: 5px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.doctor-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.letter-spacing-1 {
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+}
+
+.contact-pill {
+    background: var(--dark);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.experience-list {
+    list-style: none;
+    padding: 0;
+}
+
+.experience-list li {
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.experience-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    background: var(--primary);
+    border-radius: 50%;
+}
+
+.quote-box {
+    background: var(--bg-gray);
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid var(--accent);
+}
+
+/* --- SERVICES --- */
+.section-padding {
+    padding: 80px 0;
+}
+
+.divider {
+    width: 60px;
+    height: 4px;
+    background: var(--primary);
+    border-radius: 2px;
+    margin-top: 15px;
+}
+
+.dept-card {
+    background: white;
+    padding: 30px 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+    transition: transform 0.3s, border-color 0.3s;
+    border: 1px solid #eee;
+    text-align: center;
+    height: 100%;
+}
+
+.dept-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-light);
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-light);
+    color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto 15px auto;
+    transition: background 0.3s, color 0.3s;
+}
+
+.dept-card:hover .icon-circle {
+    background: var(--primary);
+    color: white;
+}
+
+/* --- GALLERY --- */
+.gallery-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.gallery-item.h-100 {
+    min-height: 400px;
+}
+
+.gallery-item.small-h {
+    height: 190px;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent 80%);
+    opacity: 0.8;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    transition: opacity 0.3s;
+}
+
+.gallery-item:hover .overlay {
+    background: rgba(0, 86, 179, 0.7); /* Blue tint overlay */
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay .text {
+    color: white;
+}
+
+.gallery-item:hover .overlay .text {
+    text-align: center;
+}
+
+.gallery-item h5 { color: white; margin: 0; }
+.gallery-item p { margin: 0; font-size: 0.9rem; }
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 991px) {
+    .hero-section {
+        padding-top: 100px;
+        padding-bottom: 60px;
+        text-align: left;
+    }
+    .hero-img-col {
+        margin-top: 40px;
+    }
+    .main-hero-img {
+        max-height: 300px;
+        transform: rotate(0);
+    }
+    .img-bg-shape {
+        transform: rotate(0);
+    }
+    .floating-badge {
+        left: 0;
+        bottom: -20px;
+    }
+    .owner-overlap-section {
+        margin-top: 40px; /* Remove negative overlap on mobile */
+    }
+}
+
+@media (max-width: 576px) {
+    .display-4 { font-size: 2.5rem; }
+    .gallery-item.h-100 { min-height: 250px; }
+    .gallery-item.small-h { height: 150px; }
+    .hero-contact-card { width: 100%; }
+}
